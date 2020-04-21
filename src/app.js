@@ -6,6 +6,7 @@ const forecast = require('../../weather-app/utils/utils_forecast.js')
 const geocode = require('../../weather-app/utils/utils_geocode.js')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 const path_2 = path.join(__dirname, '../public')
 const path_3 = path.join(__dirname, '../templates/views')
@@ -78,6 +79,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('The server is up!')
 })

@@ -8,7 +8,7 @@ a.addEventListener('submit', (e) => {
     
     c.textContent = 'Loading....'
     d.textContent = ''                      // To empty the second paragraph for later reuse!
-    fetch('http://localhost:3000/weather?address=' + b.value).then((response) => {    // 'fetch().then()' is an asynchronous function
+    fetch('/weather?address=' + b.value).then((response) => {    // 'fetch().then()' is an asynchronous function
         response.json().then((data) => {
             if(data.error)
                 c.textContent = data.error
